@@ -52,7 +52,7 @@ bool BezierCurve::fullyInitialized() const
     return std::find(_points.begin(), _points.end(), sf::Vector2f{-1, -1}) == _points.end();
 }
 
-void BezierCurve::draw(sf::RenderTarget& target_, sf::RenderStates states_) const
+void BezierCurve::draw(sf::RenderTarget& target_, sf::RenderStates) const
 {
     for (int point_idx{0}; point_idx < 4; ++point_idx)
     {
