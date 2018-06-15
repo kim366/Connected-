@@ -1,0 +1,3 @@
+/home/kim/Documents/Bezier/build/CMakeFiles/rebuild_cache.dir
+/home/kim/Documents/Bezier/build/CMakeFiles/main.dir
+/home/kim/Documents/Bezier/build/CMakeFiles/edit_cache.dir
