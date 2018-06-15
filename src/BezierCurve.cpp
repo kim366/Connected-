@@ -54,12 +54,12 @@ bool BezierCurve::fullyInitialized() const
 
 void BezierCurve::draw(sf::RenderTarget& target_, sf::RenderStates states_) const
 {
-    for (auto& point : {_points[0], _points[3]})
+    for (int point_idx{0}; point_idx < 4; ++point_idx)
     {
         sf::CircleShape circle{2};
         circle.setOrigin(2, 2);
-        circle.setPosition(point);
-        circle.setFillColor({100, 100, 100});
+        circle.setPosition(_points[point_idx]);
+        circle.setFillColor(point_idx == 1 || point_idx == 2 ? sf::Color{100, 100, 100} : sf::Color{255, 255, 255});
         target_.draw(circle);
     }
 
