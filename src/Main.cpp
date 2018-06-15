@@ -2,9 +2,6 @@
 #include "Misc.hpp"
 #include "BezierCurve.hpp"
 
-// #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
-
 int main()
 {
     const sf::ContextSettings aa_8x{0, 0, 8};

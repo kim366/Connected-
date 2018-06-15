@@ -22,11 +22,11 @@ void BezierCurve::makeCurve()
             while (remaining_points.size() > 1)
             {
                 std::vector<sf::Vector2f> current_remaining_points;
-                for (auto it{remaining_points.cbegin()}; it != remaining_points.cend();)
+                for (auto point{remaining_points.cbegin()}; point != remaining_points.cend();)
                 {
-                    auto current_it{it};
-                    if (++it != remaining_points.cend())
-                        current_remaining_points.push_back(vinterpolate(t, *current_it, *it));
+                    auto cur_point{point};
+                    if (++point != remaining_points.cend())
+                        current_remaining_points.push_back(vinterpolate(t, *cur_point, *point));
                 }
                 remaining_points = current_remaining_points;
             }
