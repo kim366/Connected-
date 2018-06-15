@@ -13,7 +13,7 @@ void BezierCurve::makeCurve()
 {
     if (fullyInitialized())
     {
-        for (float n{50}, t{0}; t <= 1.01; t += 1 / n)
+        for (float t{0}; t <= 1.01; t += 1.f / NUM_SEGMENTS)
         {
             std::vector<sf::Vector2f> remaining_points;
             remaining_points.resize(4);

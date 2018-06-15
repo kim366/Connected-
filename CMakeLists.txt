@@ -4,6 +4,9 @@ project(connected-bezier-curves)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules")
 find_package(SFML 2 COMPONENTS system window graphics REQUIRED)
 
+set(NUM_SEGMENTS 50 CACHE STRING "Number of curve segments")
+add_definitions(-DNUM_SEGMENTS=${NUM_SEGMENTS})
+
 include_directories(${SFML_INCLUDE_DIR})
 aux_source_directory(src sources)
 list(REMOVE_ITEM sources "src/Test.cpp")
